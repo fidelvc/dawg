@@ -14,5 +14,22 @@
     3. Deberás controlar con un bucle que el usuario no deje la respuesta en blanco y que instroduzca solamente números. En caso contrario se le hará volver a formular la pregunta. 
     4. Una vez acertado, se mostrará un mensaje con el número de intentos utilizados.  
     -->
+    <p id="demo">Hola</p>
+    <script>
+        let numAleatorio;
+        let max = 50;
+        let min = 1;
+
+
+        /* Math.random retorna un número aleatorio entre 0 y 1 de coma flotante. Y para usarlo en el rango que nos interesa hay que realizar un ajuste */
+        numAleatorio = Math.random() * (max - min) + min ;
+
+        /* No nos interesa ver tantos decimales, pasamos a utilizar otro método Math.floor(). Este redondea el valor. */max
+
+        numAleatorio = Math.floor(numAleatorio); 
+
+        console.log(numAleatorio);
+        document.getElementById("demo").innerHTML = numAleatorio;
+    </script>
 </body>
 </html>
