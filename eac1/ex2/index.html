@@ -16,9 +16,14 @@
     -->
     <p id="demo">Hola</p>
     <script>
+
+        // Definimos la variable donde almacenaremos el número aleatorio y también los límites. 
         let numAleatorio;
         let max = 50;
         let min = 1;
+
+        // Con el prompt recogemos un valor como muestra y antes de guardarlo en inputNumber lo parseamos, lo convertimos a un entero. 
+        let inputNumber = parseInt(prompt("Introduce un número"));
 
 
         /* Math.random retorna un número aleatorio entre 0 y 1 de coma flotante. Y para usarlo en el rango que nos interesa hay que realizar un ajuste */
@@ -29,7 +34,10 @@
         numAleatorio = Math.floor(numAleatorio); 
 
         console.log(numAleatorio);
-        document.getElementById("demo").innerHTML = numAleatorio;
+        document.getElementById("demo").innerHTML = `
+            El número introducido es: ${typeof(inputNumber)}.
+            El número generado es: ${numAleatorio}.
+        `;
     </script>
 </body>
 </html>
